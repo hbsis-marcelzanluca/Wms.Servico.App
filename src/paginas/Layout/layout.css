@@ -1,0 +1,54 @@
+main {}
+main .brand {
+    position: fixed;
+    width: 100%;
+    display: block;
+    padding: 16px 29px;
+    background-color: #1d285a;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-top: 82px;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#conteudo-pagina {
+    width: 100%;
+    position: absolute;
+}
+
+#wrapper.toggled #conteudo-pagina {
+    position: absolute;
+    margin-right: -250px;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #conteudo-pagina {
+        position: relative;
+    }
+
+    #wrapper.toggled #conteudo-pagina {
+        position: relative;
+        margin-right: 0;
+    }
+}
